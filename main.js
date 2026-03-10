@@ -28,6 +28,7 @@
 const input = document.getElementById("nameInput");
 const button = document.getElementById("showName");
 const output = document.getElementById("output");
+const clearButton = document.getElementById("clearButton");
 
 button.addEventListener("click", () => {
     if (input.value.trim() !== "") {
@@ -37,4 +38,10 @@ button.addEventListener("click", () => {
         output.textContent = "Пожалуйста, введите имя!";
         output.style.color = "red";
     }
+});
+clearButton.addEventListener("click", () => {
+    input.value = "";           
+    output.textContent = "";    
+    output.style.color = "";    
+    input.focus();              
 });
